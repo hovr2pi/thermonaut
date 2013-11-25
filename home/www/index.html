@@ -37,11 +37,33 @@
 
 		<section class="container">
 			<!-- Edit your introduction here -->
-			<h1>Create a Beautiful Invite or Preview Page</h1>
-			<h2>Your product or business description here</h2>
+			<h1>High Accuracy Extrapolated Ab initio Thermochemistry</h1>
+			<h2>thermochemical parameter database</h2>
 			<form>
-				<input type="email" placeholder="Enter Email" required>
-				<button type="button" class="btn btn-gold">Request an Invite</button>
+		<!--		<input type="email" placeholder="Enter Email" required>
+		<button type="button" class="btn btn-gold">Request an Invite</button> -->
+		<form action="" method="post">
+			    <input type="submit" value="Send details to embassy" />
+			        <input type="hidden" name="button_pressed" value="1" />
+			</form>
+
+			<?php
+
+			if(isset($_POST['button_pressed']))
+			{
+			    $to      = 'nobody@example.com';
+			        $subject = 'the subject';
+				    $message = 'hello';
+				        $headers = 'From: webmaster@example.com' . "\r\n" .
+					        'Reply-To: webmaster@example.com' . "\r\n" .
+						        'X-Mailer: PHP/' . phpversion();
+
+							    mail($to, $subject, $message, $headers);
+
+							        echo 'Email Sent.';
+								}
+
+								?>
 			</form>
 		</section>
 
